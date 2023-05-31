@@ -1,0 +1,11 @@
+[[language]]
+name = "groovy"
+scope = "source.groovy"
+injection-regex = "groovy"
+file-types = ["groovy"]
+comment-token = "//"
+roots = ["pom.xml", "build.gradle", "build.gradle.kts"]
+language-server =  { command = "java", args = ["-jar", "groovy-language-server-all.jar"] }
+grammar = "java"
+indent = { tab-width = 4, unit = "    " }
+
