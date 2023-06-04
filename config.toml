@@ -1,9 +1,14 @@
 
-theme = "onedark"
+theme = "my-onedark"
 
 [editor]
 line-number = "relative"
 mouse = false
+color-modes = true
+rulers = [80]
+indent-guides.render = true
+bufferline = "always"
+
 
 [editor.cursor-shape]
 insert = "bar"
@@ -14,10 +19,16 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner"]
+left = ["mode", "spinner", "version-control"]
 center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = ""
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+
+[editor.lsp]
+snippets = true
+display-messages = true
+
+
