@@ -9,7 +9,6 @@ rulers = [80]
 indent-guides.render = true
 bufferline = "always"
 
-
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -30,5 +29,19 @@ mode.select = "SELECT"
 [editor.lsp]
 snippets = true
 display-messages = true
+
+# or control each character
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+#space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+#tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
 
 
