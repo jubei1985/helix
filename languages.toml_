@@ -1,0 +1,57 @@
+[[language]]
+name = "groovy"
+scope = "source.groovy"
+injection-regex = "groovy"
+file-types = ["groovy"]
+comment-token = "//"
+roots = ["pom.xml", "build.gradle", "build.gradle.kts"]
+language-server =  { command = "groovy-language-server" }
+grammar = "java"
+indent = { tab-width = 4, unit = "    " }
+[language.debugger]
+name = "groovy"
+transport = "stdio"
+# args consisting of cmd (node) and path to adapter should be added to user's configuration
+command = "javadbg"
+quirks = { absolute-paths = true }
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [ { name = "main", completion = "filename"} ]
+args = { console = "internalConsole", program = "{0}" }
+
+[[language]]
+name = "java"
+scope = "source.java"
+injection-regex = "java"
+file-types = ["java"]
+comment-token = "//"
+roots = ["pom.xml", "build.gradle", "build.gradle.kts"]
+language-server =  { command = "jdtls" }
+grammar = "java"
+indent = { tab-width = 4, unit = "    " }
+[language.debugger]
+name = "java"
+transport = "stdio"
+# args consisting of cmd (node) and path to adapter should be added to user's configuration
+command = "javadbg"
+quirks = { absolute-paths = true }
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [ { name = "main", completion = "filename"} ]
+args = { console = "internalConsole", program = "{0}" }
+
+#[[language]]
+# name = "python"
+# [language.debugger]
+# name = "debugpy"
+# transport = "stdio"
+# command = "python3"
+# args = ["-m",  "debugpy.adapter"]
+# [[language.debugger.templates]]
+# name = "source"
+# request = "launch"
+# completion = [ { name = "entrypoint", completion = "filename", default = "." } ]
+# args = { mode = "debug", program = "{0}" }
+
