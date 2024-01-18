@@ -30,8 +30,6 @@ mode.select = "SELECT"
 snippets = true
 display-messages = true
 
-<<<<<<< HEAD
-=======
 # or control each character
 [editor.whitespace.render]
 space = "all"
@@ -45,6 +43,3 @@ tab = "→"
 newline = "⏎"
 #tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 
-
-
->>>>>>> a9068ad7a9743aee9abe0e7eea4c1c6405b86d54
